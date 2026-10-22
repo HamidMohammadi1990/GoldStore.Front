@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Vazirmatn', system-ui, sans-serif;
+
+  --color-gold-50: #faf6ed;
+  --color-gold-100: #f3ead4;
+  --color-gold-200: #e6d4a8;
+  --color-gold-300: #d4b872;
+  --color-gold-400: #c9a24e;
+  --color-gold-500: #b8862e;
+  --color-gold-600: #9a6a24;
+  --color-gold-700: #7d5220;
+  --color-gold-800: #684420;
+  --color-gold-900: #593a1f;
+
+  --color-surface: #faf9f7;
+  --color-surface-elevated: #ffffff;
+  --color-ink: #1a1814;
+  --color-ink-muted: #5c574f;
+  --color-ink-subtle: #8a847a;
+  --color-border: #e8e4dc;
+  --color-border-strong: #d4cec2;
+
+  --shadow-soft: 0 4px 24px -4px rgb(26 24 20 / 0.08);
+  --shadow-card: 0 8px 32px -8px rgb(26 24 20 / 0.1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-gold-200 text-ink;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes mobile-nav-panel-in {
+  from {
+    opacity: 0.6;
+    transform: translateX(12%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav-panel {
+  animation: mobile-nav-panel-in 0.22s ease-out;
+}
