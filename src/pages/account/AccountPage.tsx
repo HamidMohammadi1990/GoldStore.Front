@@ -76,6 +76,11 @@ export function AccountPage() {
                   علاقه‌مندی‌ها
                 </Link>
               </li>
+              <li>
+                <Link to="/admin" className="text-gold-700 hover:underline">
+                  داشبورد مدیریت
+                </Link>
+              </li>
             </ul>
 
             <Button variant="outline" className="mt-8" onClick={logout}>

@@ -35,5 +35,4 @@ export interface HomeContent {
   newArrivals: HomeSection
   collections: HomeSection
   blogPosts: BlogPostSummary[]
-  goldPricePerGram?: number
 }

@@ -15,3 +15,13 @@ export function formatWeightGrams(weight: number): string {
 export function formatPersianDigits(value: string | number): string {
   return faNumberFormatter.format(Number(value))
 }
+
+export function formatShortDate(iso: string): string {
+  const date = new Date(iso)
+  if (Number.isNaN(date.getTime())) return iso
+  return new Intl.DateTimeFormat('fa-IR', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  }).format(date)
+}

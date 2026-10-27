@@ -60,3 +60,55 @@
 .mobile-nav-panel {
   animation: mobile-nav-panel-in 0.22s ease-out;
 }
+
+.admin-sidebar {
+  transform: translateX(100%);
+  transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.admin-sidebar[data-open='true'] {
+  transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+  .admin-sidebar {
+    transform: none;
+  }
+}
+
+.admin-submenu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.admin-submenu[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+
+.admin-submenu-inner {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.admin-submenu[data-open='true'] .admin-submenu-inner {
+  opacity: 1;
+}
+
+.admin-nav-chevron {
+  transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.admin-nav-group[data-open='false'] .admin-nav-chevron {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-sidebar,
+  .admin-submenu,
+  .admin-submenu-inner,
+  .admin-nav-chevron {
+    transition: none;
+  }
+}

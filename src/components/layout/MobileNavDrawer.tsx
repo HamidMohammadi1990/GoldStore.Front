@@ -143,6 +143,13 @@ export function MobileNavDrawer({
 
         <div className="shrink-0 border-t border-border bg-surface-elevated p-3">
           <Link
+            to="/admin"
+            className="mb-2 flex min-h-11 items-center gap-2 rounded-xl border border-border px-3 text-sm font-medium text-ink"
+            onClick={onClose}
+          >
+            داشبورد مدیریت
+          </Link>
+          <Link
             to="/account"
             className="flex min-h-11 items-center gap-2 rounded-xl bg-ink px-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
             onClick={onClose}

@@ -4,7 +4,6 @@ import { mockProducts } from '@/mocks/products'
 import type { HomeContent } from '@/types/home'
 
 export const mockHomeContent: HomeContent = {
-  goldPricePerGram: 8_450_000,
   heroSlides: [
     {
       id: 'h1',

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import {
   Heart,
+  LayoutDashboard,
   Menu,
   Search,
   ShoppingBag,
@@ -97,6 +98,13 @@ export function Header({ categories }: HeaderProps) {
         </nav>
 
         <div className="ms-auto flex items-center gap-0.5 sm:gap-1">
+          <Link
+            to="/admin"
+            className="inline-flex size-10 items-center justify-center rounded-full text-ink-muted transition-colors hover:bg-gold-50 hover:text-ink"
+            aria-label="داشبورد مدیریت"
+          >
+            <LayoutDashboard className="size-5" />
+          </Link>
           <button
             type="button"
             className="inline-flex size-10 items-center justify-center rounded-full text-ink-muted transition-colors hover:bg-gold-50 hover:text-ink"
